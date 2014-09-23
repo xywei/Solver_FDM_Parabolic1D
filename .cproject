@@ -10,6 +10,7 @@
 					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -22,15 +23,42 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1220926904" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug">
 								<option id="gnu.cpp.compiler.exe.debug.option.optimization.level.390507718" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.1329822290" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.811019948" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="/opt/intel/mkl/10.2.4.032/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/ipp/em64t/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/mkl/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/tbb/include"/>
+									<listOptionValue builtIn="false" value="/math/pg/ma/xweiaf/xywei/standalone_softwares/eigen"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.401718524" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.539009203" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.1551977707" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.debug.option.debugging.level.1261738321" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.1852912181" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="/opt/intel/mkl/10.2.4.032/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/ipp/em64t/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/mkl/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/tbb/include"/>
+									<listOptionValue builtIn="false" value="/math/pg/ma/xweiaf/xywei/standalone_softwares/eigen"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1459556184" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.1952892710" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.787025319" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.787025319" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1256646664" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.exe.debug.1536909869" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.debug">
+								<option id="gnu.both.asm.option.include.paths.249922271" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="/opt/intel/mkl/10.2.4.032/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/ipp/em64t/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/mkl/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/tbb/include"/>
+									<listOptionValue builtIn="false" value="/math/pg/ma/xweiaf/xywei/standalone_softwares/eigen"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.147106573" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 						</toolChain>
@@ -51,6 +79,7 @@
 					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -63,15 +92,35 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1131942845" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release">
 								<option id="gnu.cpp.compiler.exe.release.option.optimization.level.737868449" name="Optimization Level" superClass="gnu.cpp.compiler.exe.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.release.option.debugging.level.1717244737" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2117770609" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.1343672101" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release">
 								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.exe.release.option.optimization.level.560161728" name="Optimization Level" superClass="gnu.c.compiler.exe.release.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.release.option.debugging.level.549719347" name="Debug Level" superClass="gnu.c.compiler.exe.release.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.1383887858" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="/opt/intel/mkl/10.2.4.032/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/ipp/em64t/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/mkl/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/tbb/include"/>
+									<listOptionValue builtIn="false" value="/math/pg/ma/xweiaf/xywei/standalone_softwares/eigen"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1726269746" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.release.268077367" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.release"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.1739038997" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.1739038997" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release">
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1741327692" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.exe.release.948776770" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.release">
+								<option id="gnu.both.asm.option.include.paths.609925176" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="/opt/intel/mkl/10.2.4.032/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/ipp/em64t/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/mkl/include"/>
+									<listOptionValue builtIn="false" value="/opt/intel/Compiler/11.1/069/tbb/include"/>
+									<listOptionValue builtIn="false" value="/math/pg/ma/xweiaf/xywei/standalone_softwares/eigen"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.145894997" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 						</toolChain>
@@ -87,14 +136,21 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="Solver_FDM_Parabolic1D.cdt.managedbuild.target.gnu.exe.1732100291" name="Executable" projectType="cdt.managedbuild.target.gnu.exe"/>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.303953148;cdt.managedbuild.config.gnu.exe.debug.303953148.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1220926904;cdt.managedbuild.tool.gnu.cpp.compiler.input.401718524">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.303953148;cdt.managedbuild.config.gnu.exe.debug.303953148.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.539009203;cdt.managedbuild.tool.gnu.c.compiler.input.1459556184">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.1659679031;cdt.managedbuild.config.gnu.exe.release.1659679031.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1131942845;cdt.managedbuild.tool.gnu.cpp.compiler.input.2117770609">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.1659679031;cdt.managedbuild.config.gnu.exe.release.1659679031.;cdt.managedbuild.tool.gnu.c.compiler.exe.release.1343672101;cdt.managedbuild.tool.gnu.c.compiler.input.1726269746">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 </cproject>

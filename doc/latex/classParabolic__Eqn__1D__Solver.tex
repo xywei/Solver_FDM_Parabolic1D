@@ -1,0 +1,138 @@
+\section{Parabolic\_\-Eqn\_\-1D\_\-Solver Class Reference}
+\label{classParabolic__Eqn__1D__Solver}\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+{\tt \#include $<$Parabolic\_\-Eqn\_\-1D.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Parabolic\_\-Eqn\_\-1D\_\-Solver} ()
+\item 
+int \bf{Set\_\-Initial\_\-Condition} ()
+\item 
+int \bf{Set\_\-Delta\_\-X} (double)
+\item 
+int \bf{Set\_\-Delta\_\-T} (double)
+\item 
+int \bf{Set\_\-Finishing\_\-T} (double)
+\item 
+int \bf{Step\_\-Init} ()
+\item 
+int \bf{Step\_\-Forward\_\-implicitly} ()
+\item 
+int \bf{Step\_\-Forward\_\-explicitly} ()
+\item 
+int \bf{Save\_\-Data} (std::string)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+double \bf{dx}
+\begin{CompactList}\small\item\em Spatial step size. \item\end{CompactList}\item 
+double \bf{dt}
+\begin{CompactList}\small\item\em Time step size. \item\end{CompactList}\item 
+double \bf{t\_\-F}
+\begin{CompactList}\small\item\em Final time point. \item\end{CompactList}\item 
+int \bf{N}
+\begin{CompactList}\small\item\em Number of points in spatial dimension. \item\end{CompactList}\item 
+int \bf{M}
+\begin{CompactList}\small\item\em Number of points in time axis. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+The class \doxyref{Parabolic\_\-Eqn\_\-1D\_\-Solver}{p.}{classParabolic__Eqn__1D__Solver}. Domain = [0,1]X[0,+]. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Parabolic\_\-Eqn\_\-1D\_\-Solver::Parabolic\_\-Eqn\_\-1D\_\-Solver ()}\label{classParabolic__Eqn__1D__Solver_002af159849379ce47a90a4c65d64ee8}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!Save_Data@{Save\_\-Data}}
+\index{Save_Data@{Save\_\-Data}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Parabolic\_\-Eqn\_\-1D\_\-Solver::Save\_\-Data (std::string)}\label{classParabolic__Eqn__1D__Solver_47338b1f560665ffe060b00ee84f5781}
+
+
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!Set_Delta_T@{Set\_\-Delta\_\-T}}
+\index{Set_Delta_T@{Set\_\-Delta\_\-T}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Parabolic\_\-Eqn\_\-1D\_\-Solver::Set\_\-Delta\_\-T (double)}\label{classParabolic__Eqn__1D__Solver_c2041364a5d75db226f804e41fd8fa64}
+
+
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!Set_Delta_X@{Set\_\-Delta\_\-X}}
+\index{Set_Delta_X@{Set\_\-Delta\_\-X}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Parabolic\_\-Eqn\_\-1D\_\-Solver::Set\_\-Delta\_\-X (double)}\label{classParabolic__Eqn__1D__Solver_0e2bdc740bf0c2364fba9c08ce4517e3}
+
+
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!Set_Finishing_T@{Set\_\-Finishing\_\-T}}
+\index{Set_Finishing_T@{Set\_\-Finishing\_\-T}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Parabolic\_\-Eqn\_\-1D\_\-Solver::Set\_\-Finishing\_\-T (double)}\label{classParabolic__Eqn__1D__Solver_3ac3ab78ba99135a28528955c3190818}
+
+
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!Set_Initial_Condition@{Set\_\-Initial\_\-Condition}}
+\index{Set_Initial_Condition@{Set\_\-Initial\_\-Condition}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Parabolic\_\-Eqn\_\-1D\_\-Solver::Set\_\-Initial\_\-Condition ()}\label{classParabolic__Eqn__1D__Solver_b66df7aef8046e658a0a565cb233c6d8}
+
+
+Constructor \index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!Step_Forward_explicitly@{Step\_\-Forward\_\-explicitly}}
+\index{Step_Forward_explicitly@{Step\_\-Forward\_\-explicitly}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Parabolic\_\-Eqn\_\-1D\_\-Solver::Step\_\-Forward\_\-explicitly ()}\label{classParabolic__Eqn__1D__Solver_9cb1a3ea9257a8399c21dc0f964260ee}
+
+
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!Step_Forward_implicitly@{Step\_\-Forward\_\-implicitly}}
+\index{Step_Forward_implicitly@{Step\_\-Forward\_\-implicitly}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Parabolic\_\-Eqn\_\-1D\_\-Solver::Step\_\-Forward\_\-implicitly ()}\label{classParabolic__Eqn__1D__Solver_15e19e4c8e60b6c4d2b64f0560e71fa2}
+
+
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!Step_Init@{Step\_\-Init}}
+\index{Step_Init@{Step\_\-Init}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Parabolic\_\-Eqn\_\-1D\_\-Solver::Step\_\-Init ()}\label{classParabolic__Eqn__1D__Solver_8d167c31a5f1a2925b084470d43d28f8}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!dt@{dt}}
+\index{dt@{dt}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{Parabolic\_\-Eqn\_\-1D\_\-Solver::dt}\hspace{0.3cm}{\tt  [private]}}\label{classParabolic__Eqn__1D__Solver_7b6af7f87cb317dc61a5e798ed60b2c5}
+
+
+Time step size. 
+
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!dx@{dx}}
+\index{dx@{dx}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{Parabolic\_\-Eqn\_\-1D\_\-Solver::dx}\hspace{0.3cm}{\tt  [private]}}\label{classParabolic__Eqn__1D__Solver_c761b86ba303296cb377c7a9b4993677}
+
+
+Spatial step size. 
+
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!M@{M}}
+\index{M@{M}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{Parabolic\_\-Eqn\_\-1D\_\-Solver::M}\hspace{0.3cm}{\tt  [private]}}\label{classParabolic__Eqn__1D__Solver_90500740a60d592e7f4cba83dd74f614}
+
+
+Number of points in time axis. 
+
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!N@{N}}
+\index{N@{N}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{Parabolic\_\-Eqn\_\-1D\_\-Solver::N}\hspace{0.3cm}{\tt  [private]}}\label{classParabolic__Eqn__1D__Solver_55769db6af40815292ac0600223164b5}
+
+
+Number of points in spatial dimension. 
+
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!t_F@{t\_\-F}}
+\index{t_F@{t\_\-F}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double \bf{Parabolic\_\-Eqn\_\-1D\_\-Solver::t\_\-F}\hspace{0.3cm}{\tt  [private]}}\label{classParabolic__Eqn__1D__Solver_bab464d3a381d40cbb6309890334f83a}
+
+
+Final time point. 
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+src/\bf{Parabolic\_\-Eqn\_\-1D.h}\item 
+src/\bf{Parabolic\_\-Eqn\_\-1D.cpp}\end{CompactItemize}

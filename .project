@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Solver_FDM_Parabolic1D</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<variableList>
+		<variable>
+			<name>Eigen</name>
+			<value>file:/math/pg/ma/xweiaf/xywei/standalone_softwares/eigen</value>
+		</variable>
+	</variableList>
+</projectDescription>

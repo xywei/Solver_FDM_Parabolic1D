@@ -1,0 +1,156 @@
+\section{Tridiagonal\_\-Matrix Class Reference}
+\label{classTridiagonal__Matrix}\index{Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}}
+\doxyref{Tridiagonal\_\-Matrix}{p.}{classTridiagonal__Matrix} is the class for storing tridiagonal matrices.  
+
+
+{\tt \#include $<$Tridiagonal\_\-Matrix.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Tridiagonal\_\-Matrix} ()
+\item 
+\bf{Tridiagonal\_\-Matrix} (int n)
+\item 
+double \bf{val} (int m, int n)
+\item 
+int \bf{setval} (int m, int n, double v)
+\item 
+int \bf{setdiag} (int k, double v)
+\item 
+int \bf{resize} (int n)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+int \bf{N}
+\begin{CompactList}\small\item\em Size of the matrix. \item\end{CompactList}\item 
+Eigen::Vector\-Xd \bf{diag}
+\begin{CompactList}\small\item\em The diagonal elements. \item\end{CompactList}\item 
+Eigen::Vector\-Xd \bf{upperdiag}
+\begin{CompactList}\small\item\em The upper subdiagonal elements. \item\end{CompactList}\item 
+Eigen::Vector\-Xd \bf{lowerdiag}
+\begin{CompactList}\small\item\em The lower subdiagonal elements. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Tridiagonal\_\-Matrix}{p.}{classTridiagonal__Matrix} is the class for storing tridiagonal matrices. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}!Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}}
+\index{Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}!Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Tridiagonal\_\-Matrix::Tridiagonal\_\-Matrix ()}\label{classTridiagonal__Matrix_61254f2f871e74abcdcca09eb4876eab}
+
+
+A constructor. \index{Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}!Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}}
+\index{Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}!Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Tridiagonal\_\-Matrix::Tridiagonal\_\-Matrix (int {\em n})}\label{classTridiagonal__Matrix_60b376610dd977a9a0e81ff8ee840a0e}
+
+
+Another constructor. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em n}]Size of the matrix. \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}!resize@{resize}}
+\index{resize@{resize}!Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Tridiagonal\_\-Matrix::resize (int {\em n})}\label{classTridiagonal__Matrix_3e80dbefb7a99414ea89c6b1631a6c41}
+
+
+Reset the size of the the matrix (data deprecated). \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em n}]New size of the matrix. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]0 if secceeded. \end{Desc}
+\index{Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}!setdiag@{setdiag}}
+\index{setdiag@{setdiag}!Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Tridiagonal\_\-Matrix::setdiag (int {\em k}, double {\em v})}\label{classTridiagonal__Matrix_34e500a509a42e98a16d0db4b8f121fd}
+
+
+Set value of elements on a (sub)diagonal line. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em k}]0, 1 or -1, indicating which line to set. \item[{\em b}]Value to be set. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]0 If succeeded. \end{Desc}
+\index{Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}!setval@{setval}}
+\index{setval@{setval}!Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Tridiagonal\_\-Matrix::setval (int {\em m}, int {\em n}, double {\em v})}\label{classTridiagonal__Matrix_97437bf596edcf62bd0a14f0c539fc1b}
+
+
+Set value of an element. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em m}]Row index. \item[{\em n}]Column index. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]0 If succeeded. \end{Desc}
+
+
+Upper sub-diagonal line
+
+Diagonal line
+
+Lower sub-diagonal line \index{Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}!val@{val}}
+\index{val@{val}!Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Tridiagonal\_\-Matrix::val (int {\em m}, int {\em n})}\label{classTridiagonal__Matrix_8436213551429d151776492406f13b6c}
+
+
+Reading value of an element. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em m}]Row index. \item[{\em n}]Column index. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The value of [m][n]. \end{Desc}
+
+
+Upper sub-diagonal line
+
+Diagonal line
+
+Lower sub-diagonal line 
+
+\subsection{Member Data Documentation}
+\index{Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}!diag@{diag}}
+\index{diag@{diag}!Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Eigen::Vector\-Xd \bf{Tridiagonal\_\-Matrix::diag}\hspace{0.3cm}{\tt  [private]}}\label{classTridiagonal__Matrix_f127f0ba8a55ba4b2eaeb9a4032a0e7a}
+
+
+The diagonal elements. 
+
+\index{Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}!lowerdiag@{lowerdiag}}
+\index{lowerdiag@{lowerdiag}!Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Eigen::Vector\-Xd \bf{Tridiagonal\_\-Matrix::lowerdiag}\hspace{0.3cm}{\tt  [private]}}\label{classTridiagonal__Matrix_683fae6717b440cdccdc375016b3dac3}
+
+
+The lower subdiagonal elements. 
+
+\index{Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}!N@{N}}
+\index{N@{N}!Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{Tridiagonal\_\-Matrix::N}\hspace{0.3cm}{\tt  [private]}}\label{classTridiagonal__Matrix_67f848cb764aa6e2b5e6cd4ef6d83e21}
+
+
+Size of the matrix. 
+
+\index{Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}!upperdiag@{upperdiag}}
+\index{upperdiag@{upperdiag}!Tridiagonal_Matrix@{Tridiagonal\_\-Matrix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Eigen::Vector\-Xd \bf{Tridiagonal\_\-Matrix::upperdiag}\hspace{0.3cm}{\tt  [private]}}\label{classTridiagonal__Matrix_0576a56d65ea8e5404986281c161fbf0}
+
+
+The upper subdiagonal elements. 
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+src/\bf{Tridiagonal\_\-Matrix.h}\item 
+src/\bf{Tridiagonal\_\-Matrix.cpp}\end{CompactItemize}

@@ -27,33 +27,35 @@
 <a name="l00008"></a>00008 <span class="preprocessor">#ifndef PARABOLIC_EQN_1D_H_</span>
 <a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#define PARABOLIC_EQN_1D_H_</span>
 <a name="l00010"></a>00010 <span class="preprocessor"></span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;vector&gt;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;string&gt;</span>
-<a name="l00013"></a>00013 
-<a name="l00019"></a><a class="code" href="classParabolic__Eqn__1D__Solver.html">00019</a> <span class="keyword">class </span><a class="code" href="classParabolic__Eqn__1D__Solver.html">Parabolic_Eqn_1D_Solver</a> {
-<a name="l00020"></a>00020 <span class="keyword">public</span>:
-<a name="l00021"></a>00021         <a class="code" href="classParabolic__Eqn__1D__Solver.html#002af159849379ce47a90a4c65d64ee8">Parabolic_Eqn_1D_Solver</a>( ); 
-<a name="l00022"></a>00022         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#b66df7aef8046e658a0a565cb233c6d8">Set_Initial_Condition</a>();
-<a name="l00023"></a>00023         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#0e2bdc740bf0c2364fba9c08ce4517e3">Set_Delta_X</a>( <span class="keywordtype">double</span> );
-<a name="l00024"></a>00024         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#c2041364a5d75db226f804e41fd8fa64">Set_Delta_T</a>( <span class="keywordtype">double</span> );
-<a name="l00025"></a>00025         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#3ac3ab78ba99135a28528955c3190818">Set_Finishing_T</a>( <span class="keywordtype">double</span> );
-<a name="l00026"></a>00026         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#8d167c31a5f1a2925b084470d43d28f8">Step_Init</a>();
-<a name="l00027"></a>00027         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#15e19e4c8e60b6c4d2b64f0560e71fa2">Step_Forward_implicitly</a>();
-<a name="l00028"></a>00028         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#9cb1a3ea9257a8399c21dc0f964260ee">Step_Forward_explicitly</a>();
-<a name="l00029"></a>00029         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#47338b1f560665ffe060b00ee84f5781">Save_Data</a>( std::string );
-<a name="l00030"></a>00030 <span class="keyword">private</span>:
-<a name="l00034"></a><a class="code" href="classParabolic__Eqn__1D__Solver.html#c761b86ba303296cb377c7a9b4993677">00034</a>         <span class="keywordtype">double</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#c761b86ba303296cb377c7a9b4993677">dx</a>;
-<a name="l00038"></a><a class="code" href="classParabolic__Eqn__1D__Solver.html#7b6af7f87cb317dc61a5e798ed60b2c5">00038</a>         <span class="keywordtype">double</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#7b6af7f87cb317dc61a5e798ed60b2c5">dt</a>;
-<a name="l00042"></a><a class="code" href="classParabolic__Eqn__1D__Solver.html#bab464d3a381d40cbb6309890334f83a">00042</a>         <span class="keywordtype">double</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#bab464d3a381d40cbb6309890334f83a">t_F</a>;
-<a name="l00046"></a><a class="code" href="classParabolic__Eqn__1D__Solver.html#55769db6af40815292ac0600223164b5">00046</a>         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#55769db6af40815292ac0600223164b5">N</a>;
-<a name="l00050"></a><a class="code" href="classParabolic__Eqn__1D__Solver.html#90500740a60d592e7f4cba83dd74f614">00050</a>         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#90500740a60d592e7f4cba83dd74f614">M</a>;
-<a name="l00054"></a>00054         std::vector&lt;std::vector&lt;double&gt;&gt; U;
-<a name="l00055"></a>00055 };
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 <span class="preprocessor">#endif </span><span class="comment">/* PARABOLIC_EQN_1D_H_ */</span>
-</pre></div><hr size="1"><address style="align: right;"><small>Generated on 23 Sep 2014 for A_FDM_Solver_for_1D_Parabolic_Equation by&nbsp;
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;Eigen/Dense&gt;</span>
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <span class="comment">/*</span>
+<a name="l00014"></a>00014 <span class="comment"> * The class Parabolic_Eqn_1D_Solver.</span>
+<a name="l00015"></a>00015 <span class="comment"> * Domain = [0,1]X[0,+\infty].</span>
+<a name="l00016"></a>00016 <span class="comment"> */</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a><a class="code" href="classParabolic__Eqn__1D__Solver.html">00018</a> <span class="keyword">class </span><a class="code" href="classParabolic__Eqn__1D__Solver.html">Parabolic_Eqn_1D_Solver</a> {
+<a name="l00019"></a>00019 <span class="keyword">public</span>:
+<a name="l00020"></a>00020         <a class="code" href="classParabolic__Eqn__1D__Solver.html#002af159849379ce47a90a4c65d64ee8">Parabolic_Eqn_1D_Solver</a>( ); 
+<a name="l00021"></a>00021         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#b66df7aef8046e658a0a565cb233c6d8">Set_Initial_Condition</a>();
+<a name="l00022"></a>00022         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#0e2bdc740bf0c2364fba9c08ce4517e3">Set_Delta_X</a>( <span class="keywordtype">double</span> );
+<a name="l00023"></a>00023         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#c2041364a5d75db226f804e41fd8fa64">Set_Delta_T</a>( <span class="keywordtype">double</span> );
+<a name="l00024"></a>00024         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#3ac3ab78ba99135a28528955c3190818">Set_Finishing_T</a>( <span class="keywordtype">double</span> );
+<a name="l00025"></a>00025         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#8d167c31a5f1a2925b084470d43d28f8">Step_Init</a>();
+<a name="l00026"></a>00026         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#15e19e4c8e60b6c4d2b64f0560e71fa2">Step_Forward_implicitly</a>();
+<a name="l00027"></a>00027         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#9cb1a3ea9257a8399c21dc0f964260ee">Step_Forward_explicitly</a>();
+<a name="l00028"></a>00028         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#47338b1f560665ffe060b00ee84f5781">Save_Data</a>( std::string );
+<a name="l00029"></a>00029 <span class="keyword">private</span>:
+<a name="l00033"></a><a class="code" href="classParabolic__Eqn__1D__Solver.html#c761b86ba303296cb377c7a9b4993677">00033</a>         <span class="keywordtype">double</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#c761b86ba303296cb377c7a9b4993677">dx</a>;
+<a name="l00037"></a><a class="code" href="classParabolic__Eqn__1D__Solver.html#7b6af7f87cb317dc61a5e798ed60b2c5">00037</a>         <span class="keywordtype">double</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#7b6af7f87cb317dc61a5e798ed60b2c5">dt</a>;
+<a name="l00041"></a><a class="code" href="classParabolic__Eqn__1D__Solver.html#bab464d3a381d40cbb6309890334f83a">00041</a>         <span class="keywordtype">double</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#bab464d3a381d40cbb6309890334f83a">t_F</a>;
+<a name="l00045"></a><a class="code" href="classParabolic__Eqn__1D__Solver.html#55769db6af40815292ac0600223164b5">00045</a>         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#55769db6af40815292ac0600223164b5">N</a>;
+<a name="l00049"></a><a class="code" href="classParabolic__Eqn__1D__Solver.html#90500740a60d592e7f4cba83dd74f614">00049</a>         <span class="keywordtype">int</span> <a class="code" href="classParabolic__Eqn__1D__Solver.html#90500740a60d592e7f4cba83dd74f614">M</a>;
+<a name="l00053"></a><a class="code" href="classParabolic__Eqn__1D__Solver.html#0306c84a031702519a27d4801becaabb">00053</a>          Eigen::MatrixXd <a class="code" href="classParabolic__Eqn__1D__Solver.html#0306c84a031702519a27d4801becaabb">U</a>;
+<a name="l00054"></a>00054 };
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 <span class="preprocessor">#endif </span><span class="comment">/* PARABOLIC_EQN_1D_H_ */</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Generated on 24 Sep 2014 for A_FDM_Solver_for_1D_Parabolic_Equation by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
 </body>

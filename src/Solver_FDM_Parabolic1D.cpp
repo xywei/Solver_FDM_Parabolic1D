@@ -7,9 +7,20 @@
 //============================================================================
 
 #include <iostream>
+#include <Eigen/Dense>
+#include "Tridiagonal_Linear_Solver.h"
+
 using namespace std;
+using namespace Eigen;
 
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	Eigen::VectorXd x;
+	VectorXd b(4);
+	b << 3,4,4,3;
+	std::cout << b << std::endl;
+	Tridiagonal_Linear_Solver S(b, x);
+	S.setA(1.0, 2.0, 1.0);
+	S.solve();
+	std::cout << x << std::endl;
 	return 0;
 }

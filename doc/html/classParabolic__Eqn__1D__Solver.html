@@ -56,10 +56,10 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#90500740a60d592e7f4cba83dd74f614">M</a></td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Number of points in time axis.  <a href="#90500740a60d592e7f4cba83dd74f614"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">Eigen::MatrixXd&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#0306c84a031702519a27d4801becaabb">U</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">U[m][n] is the value of u on (n+1)-th point at the (m)-th time step (because time starts at 0).  <a href="#0306c84a031702519a27d4801becaabb"></a><br></td></tr>
 </table>
-<hr><a name="_details"></a><h2>Detailed Description</h2>
-The class <a class="el" href="classParabolic__Eqn__1D__Solver.html">Parabolic_Eqn_1D_Solver</a>. Domain = [0,1]X[0,+]. 
-<p>
 <hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="002af159849379ce47a90a4c65d64ee8"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Parabolic_Eqn_1D_Solver" ref="002af159849379ce47a90a4c65d64ee8" args="()" -->
 <div class="memitem">
@@ -323,9 +323,26 @@ Final time point.
 
 </div>
 </div><p>
+<a class="anchor" name="0306c84a031702519a27d4801becaabb"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::U" ref="0306c84a031702519a27d4801becaabb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classParabolic__Eqn__1D__Solver.html#0306c84a031702519a27d4801becaabb">Parabolic_Eqn_1D_Solver::U</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+U[m][n] is the value of u on (n+1)-th point at the (m)-th time step (because time starts at 0). 
+<p>
+
+</div>
+</div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="Parabolic__Eqn__1D_8h-source.html">Parabolic_Eqn_1D.h</a><li>src/<a class="el" href="Parabolic__Eqn__1D_8cpp.html">Parabolic_Eqn_1D.cpp</a></ul>
-<hr size="1"><address style="align: right;"><small>Generated on 23 Sep 2014 for A_FDM_Solver_for_1D_Parabolic_Equation by&nbsp;
+<hr size="1"><address style="align: right;"><small>Generated on 24 Sep 2014 for A_FDM_Solver_for_1D_Parabolic_Equation by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
 </body>

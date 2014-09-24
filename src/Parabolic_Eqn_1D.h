@@ -8,10 +8,9 @@
 #ifndef PARABOLIC_EQN_1D_H_
 #define PARABOLIC_EQN_1D_H_
 
-#include <vector>
-#include <string>
+#include <Eigen/Dense>
 
-/**
+/*
  * The class Parabolic_Eqn_1D_Solver.
  * Domain = [0,1]X[0,+\infty].
  */
@@ -49,11 +48,9 @@ private:
 	 */
 	int M;
 	/**
-	 * \brief U[m][n] is the value of u on n-th point at the (m-1)-th time step (because time starts at 0).
+	 * \brief U[m][n] is the value of u on (n+1)-th point at the (m)-th time step (because time starts at 0).
 	 */
-	std::vector<std::vector<double>> U;
+	 Eigen::MatrixXd U;
 };
-
-
 
 #endif /* PARABOLIC_EQN_1D_H_ */

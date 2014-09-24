@@ -35,12 +35,9 @@ double \bf{t\_\-F}
 int \bf{N}
 \begin{CompactList}\small\item\em Number of points in spatial dimension. \item\end{CompactList}\item 
 int \bf{M}
-\begin{CompactList}\small\item\em Number of points in time axis. \item\end{CompactList}\end{CompactItemize}
-
-
-\subsection{Detailed Description}
-The class \doxyref{Parabolic\_\-Eqn\_\-1D\_\-Solver}{p.}{classParabolic__Eqn__1D__Solver}. Domain = [0,1]X[0,+]. 
-
+\begin{CompactList}\small\item\em Number of points in time axis. \item\end{CompactList}\item 
+Eigen::Matrix\-Xd \bf{U}
+\begin{CompactList}\small\item\em U[m][n] is the value of u on (n+1)-th point at the (m)-th time step (because time starts at 0). \item\end{CompactList}\end{CompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -129,6 +126,13 @@ Number of points in spatial dimension.
 
 
 Final time point. 
+
+\index{Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}!U@{U}}
+\index{U@{U}!Parabolic_Eqn_1D_Solver@{Parabolic\_\-Eqn\_\-1D\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Eigen::Matrix\-Xd \bf{Parabolic\_\-Eqn\_\-1D\_\-Solver::U}\hspace{0.3cm}{\tt  [private]}}\label{classParabolic__Eqn__1D__Solver_0306c84a031702519a27d4801becaabb}
+
+
+U[m][n] is the value of u on (n+1)-th point at the (m)-th time step (because time starts at 0). 
 
 
 

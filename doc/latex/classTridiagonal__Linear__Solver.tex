@@ -1,0 +1,97 @@
+\section{Tridiagonal\_\-Linear\_\-Solver Class Reference}
+\label{classTridiagonal__Linear__Solver}\index{Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}}
+\doxyref{Tridiagonal\_\-Linear\_\-Solver}{p.}{classTridiagonal__Linear__Solver} is a class handling problems of solving a tridiagonal linear system Ax=b.  
+
+
+{\tt \#include $<$Tridiagonal\_\-Linear\_\-Solver.h$>$}
+
+Collaboration diagram for Tridiagonal\_\-Linear\_\-Solver:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Tridiagonal\_\-Linear\_\-Solver} (Eigen::Vector\-Xd \&rhs, Eigen::Vector\-Xd \&solu)
+\item 
+int \bf{set\-A} (double l, double d, double u)
+\item 
+Eigen::Vector\-Xd \& \bf{solve} ()
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+int \bf{N}
+\item 
+Eigen::Vector\-Xd \& \bf{b}
+\item 
+Eigen::Vector\-Xd \& \bf{x}
+\item 
+\bf{Tridiagonal\_\-Matrix} \bf{A}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Tridiagonal\_\-Linear\_\-Solver}{p.}{classTridiagonal__Linear__Solver} is a class handling problems of solving a tridiagonal linear system Ax=b. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}!Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}}
+\index{Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}!Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Tridiagonal\_\-Linear\_\-Solver::Tridiagonal\_\-Linear\_\-Solver (Eigen::Vector\-Xd \& {\em rhs}, Eigen::Vector\-Xd \& {\em solu})}\label{classTridiagonal__Linear__Solver_0025238ebf0cc9ee3daf3ddb56396045}
+
+
+A constructor (vectors storing RHS and solution are needed as parameters). 
+
+\subsection{Member Function Documentation}
+\index{Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}!setA@{setA}}
+\index{setA@{setA}!Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Tridiagonal\_\-Linear\_\-Solver::set\-A (double {\em l}, double {\em d}, double {\em u})}\label{classTridiagonal__Linear__Solver_b083573f98513cbf62d0e9958cad9bf8}
+
+
+Set up the right hand side vector. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em rhs}]The vector b. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]0 If succeeded. \end{Desc}
+\index{Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}!solve@{solve}}
+\index{solve@{solve}!Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Eigen::Vector\-Xd \& Tridiagonal\_\-Linear\_\-Solver::solve ()}\label{classTridiagonal__Linear__Solver_64e5fdc53be7b2e1e6c2fbf7c44cb859}
+
+
+Solve the system. \begin{Desc}
+\item[Returns:]Reference to the solution vector x. \end{Desc}
+
+
+Using Thomas' algorithm to solve the system.
+
+First step: Reduce the system to upper triangular.
+
+Sencond step: Back substitution. 
+
+\subsection{Member Data Documentation}
+\index{Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}!A@{A}}
+\index{A@{A}!Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Tridiagonal\_\-Matrix} \bf{Tridiagonal\_\-Linear\_\-Solver::A}\hspace{0.3cm}{\tt  [private]}}\label{classTridiagonal__Linear__Solver_fd7d76439c9c05e99723591f04f64e18}
+
+
+Coefficient matrix (tridiagonal). \index{Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}!b@{b}}
+\index{b@{b}!Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Eigen::Vector\-Xd\& \bf{Tridiagonal\_\-Linear\_\-Solver::b}\hspace{0.3cm}{\tt  [private]}}\label{classTridiagonal__Linear__Solver_f812b974d00b1b47e66e66ccaf0ec50e}
+
+
+Right hand side of the equation. \index{Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}!N@{N}}
+\index{N@{N}!Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{Tridiagonal\_\-Linear\_\-Solver::N}\hspace{0.3cm}{\tt  [private]}}\label{classTridiagonal__Linear__Solver_689ea9f2a1dd683d5889a923189787cf}
+
+
+Size of the system. \index{Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}!x@{x}}
+\index{x@{x}!Tridiagonal_Linear_Solver@{Tridiagonal\_\-Linear\_\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Eigen::Vector\-Xd\& \bf{Tridiagonal\_\-Linear\_\-Solver::x}\hspace{0.3cm}{\tt  [private]}}\label{classTridiagonal__Linear__Solver_63428a3a1aebc4e2935b739466f53c66}
+
+
+Solution of the equation. 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+src/\bf{Tridiagonal\_\-Linear\_\-Solver.h}\item 
+src/\bf{Tridiagonal\_\-Linear\_\-Solver.cpp}\end{CompactItemize}

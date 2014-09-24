@@ -1,0 +1,14 @@
+digraph G
+{
+  edge [fontname="FreeSans.ttf",fontsize=10,labelfontname="FreeSans.ttf",labelfontsize=10];
+  node [fontname="FreeSans.ttf",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="src/Solver_FDM_Parabolic1D.cpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize=10,style="solid"];
+  Node2 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [color="midnightblue",fontsize=10,style="solid"];
+  Node3 [label="Eigen/Dense",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node4 [color="midnightblue",fontsize=10,style="solid"];
+  Node4 [label="Tridiagonal_Linear_Solver.h",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$Tridiagonal__Linear__Solver_8h.html"];
+  Node4 -> Node3 [color="midnightblue",fontsize=10,style="solid"];
+}

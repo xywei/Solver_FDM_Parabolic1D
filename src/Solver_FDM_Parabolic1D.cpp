@@ -8,19 +8,35 @@
 
 #include <iostream>
 #include <Eigen/Dense>
-#include "Tridiagonal_Linear_Solver.h"
+#include "Parabolic_Eqn_1D.h"
 
 using namespace std;
 using namespace Eigen;
 
 int main() {
-	Eigen::VectorXd x;
-	VectorXd b(4);
-	b << 3,4,4,3;
-	std::cout << b << std::endl;
-	Tridiagonal_Linear_Solver S(b, x);
-	S.setA(1.0, 2.0, 1.0);
-	S.solve();
-	std::cout << x << std::endl;
+	const int M = 101;
+	const int N = 21;
+	const double T = 1;
+	VectorXd IC(N);
+	for(int i=0;i<N/2;i++)
+	{
+		IC(i) = 2.0 * i / (N-1);
+	}
+	for(int i=N/2;i<N;i++)
+	{
+		IC(i) = 2.0 - 2.0 * i / (N-1);
+	}
+	Parabolic_Eqn_1D_Solver S1, S2;
+	S1.Init(M, N, T, IC);
+	S2.Init(M, N, T, IC);
+	S1.Solve_explicitly();
+	S2.Solve_implicitly();
+	S1.Save_Data("S1.dat");
+	S2.Save_Data("S2.dat");
+	Parabolic_Eqn_1D_Solver Er;
+	Er.Init(M, N, T, IC);
+	Er.U = S1.U - S2.U;
+	Er.Save_Data("Er.dat");
+	cout << "Done." << endl;
 	return 0;
 }

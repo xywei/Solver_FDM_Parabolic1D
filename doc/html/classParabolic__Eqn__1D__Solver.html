@@ -24,23 +24,23 @@
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#002af159849379ce47a90a4c65d64ee8">Parabolic_Eqn_1D_Solver</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#b66df7aef8046e658a0a565cb233c6d8">Set_Initial_Condition</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#bd6d4a3162e73f10a224eaa56cf14adb">Set_Initial_Condition</a> (Eigen::VectorXd &amp;init)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#0e2bdc740bf0c2364fba9c08ce4517e3">Set_Delta_X</a> (double)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#d8cfac7756e6eb71b5cf405e41c55684">Set_Delta_X</a> (double h)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#c2041364a5d75db226f804e41fd8fa64">Set_Delta_T</a> (double)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#ba640ca1a0eb84ca330a36a65cc2aeb4">Set_Delta_T</a> (double h)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#3ac3ab78ba99135a28528955c3190818">Set_Finishing_T</a> (double)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#30420ca666a9f227664e26574e35cb06">Set_Finishing_T</a> (double tf)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#8d167c31a5f1a2925b084470d43d28f8">Step_Init</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#de582ec62b9366cfe030c8d86f1f067d">Init</a> (int m, int n, double T, Eigen::VectorXd init)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#15e19e4c8e60b6c4d2b64f0560e71fa2">Step_Forward_implicitly</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#db4631f67475f8e3d4d9e9d2421eff5d">Solve_implicitly</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#9cb1a3ea9257a8399c21dc0f964260ee">Step_Forward_explicitly</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#18ab53cf3ce51e61f2847463131ccc11">Solve_explicitly</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#47338b1f560665ffe060b00ee84f5781">Save_Data</a> (std::string)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#4cb491a13d1502a48e6d3f0f56a4b644">Save_Data</a> (std::string filename)</td></tr>
 
-<tr><td colspan="2"><br><h2>Private Attributes</h2></td></tr>
+<tr><td colspan="2"><br><h2>Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#c761b86ba303296cb377c7a9b4993677">dx</a></td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Spatial step size.  <a href="#c761b86ba303296cb377c7a9b4993677"></a><br></td></tr>
@@ -59,6 +59,9 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">Eigen::MatrixXd&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#0306c84a031702519a27d4801becaabb">U</a></td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">U[m][n] is the value of u on (n+1)-th point at the (m)-th time step (because time starts at 0).  <a href="#0306c84a031702519a27d4801becaabb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParabolic__Eqn__1D__Solver.html#1bc8bde2520169d82cf5b7a729e46c6b">ready</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flag var, = 1 if the problem is ready to solve, otherwise = 0.  <a href="#1bc8bde2520169d82cf5b7a729e46c6b"></a><br></td></tr>
 </table>
 <hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="002af159849379ce47a90a4c65d64ee8"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Parabolic_Eqn_1D_Solver" ref="002af159849379ce47a90a4c65d64ee8" args="()" -->
@@ -77,11 +80,52 @@
 <div class="memdoc">
 
 <p>
-
+A constructor. 
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="47338b1f560665ffe060b00ee84f5781"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Save_Data" ref="47338b1f560665ffe060b00ee84f5781" args="(std::string)" -->
+<a class="anchor" name="de582ec62b9366cfe030c8d86f1f067d"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Init" ref="de582ec62b9366cfe030c8d86f1f067d" args="(int m, int n, double T, Eigen::VectorXd init)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Parabolic_Eqn_1D_Solver::Init           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>T</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::VectorXd&nbsp;</td>
+          <td class="paramname"> <em>init</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Initialization of the solver. 
+</div>
+</div><p>
+<a class="anchor" name="4cb491a13d1502a48e6d3f0f56a4b644"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Save_Data" ref="4cb491a13d1502a48e6d3f0f56a4b644" args="(std::string filename)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -89,7 +133,7 @@
           <td class="memname">int Parabolic_Eqn_1D_Solver::Save_Data           </td>
           <td>(</td>
           <td class="paramtype">std::string&nbsp;</td>
-          <td class="paramname">          </td>
+          <td class="paramname"> <em>filename</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td width="100%"></td>
         </tr>
@@ -98,10 +142,16 @@
 <div class="memdoc">
 
 <p>
+Save the data in files. <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>filename</em>&nbsp;</td><td>File to save. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Returns:</b></dt><dd>0 If succeeded. </dd></dl>
 
 </div>
 </div><p>
-<a class="anchor" name="c2041364a5d75db226f804e41fd8fa64"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Set_Delta_T" ref="c2041364a5d75db226f804e41fd8fa64" args="(double)" -->
+<a class="anchor" name="ba640ca1a0eb84ca330a36a65cc2aeb4"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Set_Delta_T" ref="ba640ca1a0eb84ca330a36a65cc2aeb4" args="(double h)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -109,7 +159,7 @@
           <td class="memname">int Parabolic_Eqn_1D_Solver::Set_Delta_T           </td>
           <td>(</td>
           <td class="paramtype">double&nbsp;</td>
-          <td class="paramname">          </td>
+          <td class="paramname"> <em>h</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td width="100%"></td>
         </tr>
@@ -118,10 +168,16 @@
 <div class="memdoc">
 
 <p>
+Set time step size. <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>h</em>&nbsp;</td><td>Step size. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Returns:</b></dt><dd>0 if secceeded. </dd></dl>
 
 </div>
 </div><p>
-<a class="anchor" name="0e2bdc740bf0c2364fba9c08ce4517e3"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Set_Delta_X" ref="0e2bdc740bf0c2364fba9c08ce4517e3" args="(double)" -->
+<a class="anchor" name="d8cfac7756e6eb71b5cf405e41c55684"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Set_Delta_X" ref="d8cfac7756e6eb71b5cf405e41c55684" args="(double h)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -129,7 +185,7 @@
           <td class="memname">int Parabolic_Eqn_1D_Solver::Set_Delta_X           </td>
           <td>(</td>
           <td class="paramtype">double&nbsp;</td>
-          <td class="paramname">          </td>
+          <td class="paramname"> <em>h</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td width="100%"></td>
         </tr>
@@ -138,10 +194,16 @@
 <div class="memdoc">
 
 <p>
+Set space step size. <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>h</em>&nbsp;</td><td>Step size. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Returns:</b></dt><dd>0 if secceeded. </dd></dl>
 
 </div>
 </div><p>
-<a class="anchor" name="3ac3ab78ba99135a28528955c3190818"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Set_Finishing_T" ref="3ac3ab78ba99135a28528955c3190818" args="(double)" -->
+<a class="anchor" name="30420ca666a9f227664e26574e35cb06"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Set_Finishing_T" ref="30420ca666a9f227664e26574e35cb06" args="(double tf)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -149,7 +211,7 @@
           <td class="memname">int Parabolic_Eqn_1D_Solver::Set_Finishing_T           </td>
           <td>(</td>
           <td class="paramtype">double&nbsp;</td>
-          <td class="paramname">          </td>
+          <td class="paramname"> <em>tf</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td width="100%"></td>
         </tr>
@@ -158,17 +220,24 @@
 <div class="memdoc">
 
 <p>
+Set finalizing time. <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>tf</em>&nbsp;</td><td>Final time. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Returns:</b></dt><dd>0 If succeed; </dd></dl>
 
 </div>
 </div><p>
-<a class="anchor" name="b66df7aef8046e658a0a565cb233c6d8"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Set_Initial_Condition" ref="b66df7aef8046e658a0a565cb233c6d8" args="()" -->
+<a class="anchor" name="bd6d4a3162e73f10a224eaa56cf14adb"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Set_Initial_Condition" ref="bd6d4a3162e73f10a224eaa56cf14adb" args="(Eigen::VectorXd &amp;init)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int Parabolic_Eqn_1D_Solver::Set_Initial_Condition           </td>
           <td>(</td>
-          <td class="paramname">          </td>
+          <td class="paramtype">Eigen::VectorXd &amp;&nbsp;</td>
+          <td class="paramname"> <em>init</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td width="100%"></td>
         </tr>
@@ -177,15 +246,21 @@
 <div class="memdoc">
 
 <p>
-Constructor 
+Set the initial condition. <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>init</em>&nbsp;</td><td>The vector containing discrete initial condition. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Returns:</b></dt><dd>0 If succeeded. </dd></dl>
+
 </div>
 </div><p>
-<a class="anchor" name="9cb1a3ea9257a8399c21dc0f964260ee"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Step_Forward_explicitly" ref="9cb1a3ea9257a8399c21dc0f964260ee" args="()" -->
+<a class="anchor" name="18ab53cf3ce51e61f2847463131ccc11"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Solve_explicitly" ref="18ab53cf3ce51e61f2847463131ccc11" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Parabolic_Eqn_1D_Solver::Step_Forward_explicitly           </td>
+          <td class="memname">int Parabolic_Eqn_1D_Solver::Solve_explicitly           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -196,15 +271,15 @@ Constructor
 <div class="memdoc">
 
 <p>
-
+Solve the problem using explicit method. 
 </div>
 </div><p>
-<a class="anchor" name="15e19e4c8e60b6c4d2b64f0560e71fa2"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Step_Forward_implicitly" ref="15e19e4c8e60b6c4d2b64f0560e71fa2" args="()" -->
+<a class="anchor" name="db4631f67475f8e3d4d9e9d2421eff5d"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Solve_implicitly" ref="db4631f67475f8e3d4d9e9d2421eff5d" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Parabolic_Eqn_1D_Solver::Step_Forward_implicitly           </td>
+          <td class="memname">int Parabolic_Eqn_1D_Solver::Solve_implicitly           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -215,26 +290,7 @@ Constructor
 <div class="memdoc">
 
 <p>
-
-</div>
-</div><p>
-<a class="anchor" name="8d167c31a5f1a2925b084470d43d28f8"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::Step_Init" ref="8d167c31a5f1a2925b084470d43d28f8" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Parabolic_Eqn_1D_Solver::Step_Init           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-
+Solve the problem using implicit method. 
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -243,7 +299,7 @@ Constructor
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double <a class="el" href="classParabolic__Eqn__1D__Solver.html#7b6af7f87cb317dc61a5e798ed60b2c5">Parabolic_Eqn_1D_Solver::dt</a><code> [private]</code>          </td>
+          <td class="memname">double <a class="el" href="classParabolic__Eqn__1D__Solver.html#7b6af7f87cb317dc61a5e798ed60b2c5">Parabolic_Eqn_1D_Solver::dt</a>          </td>
         </tr>
       </table>
 </div>
@@ -260,7 +316,7 @@ Time step size.
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double <a class="el" href="classParabolic__Eqn__1D__Solver.html#c761b86ba303296cb377c7a9b4993677">Parabolic_Eqn_1D_Solver::dx</a><code> [private]</code>          </td>
+          <td class="memname">double <a class="el" href="classParabolic__Eqn__1D__Solver.html#c761b86ba303296cb377c7a9b4993677">Parabolic_Eqn_1D_Solver::dx</a>          </td>
         </tr>
       </table>
 </div>
@@ -277,7 +333,7 @@ Spatial step size.
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classParabolic__Eqn__1D__Solver.html#90500740a60d592e7f4cba83dd74f614">Parabolic_Eqn_1D_Solver::M</a><code> [private]</code>          </td>
+          <td class="memname">int <a class="el" href="classParabolic__Eqn__1D__Solver.html#90500740a60d592e7f4cba83dd74f614">Parabolic_Eqn_1D_Solver::M</a>          </td>
         </tr>
       </table>
 </div>
@@ -294,7 +350,7 @@ Number of points in time axis.
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classParabolic__Eqn__1D__Solver.html#55769db6af40815292ac0600223164b5">Parabolic_Eqn_1D_Solver::N</a><code> [private]</code>          </td>
+          <td class="memname">int <a class="el" href="classParabolic__Eqn__1D__Solver.html#55769db6af40815292ac0600223164b5">Parabolic_Eqn_1D_Solver::N</a>          </td>
         </tr>
       </table>
 </div>
@@ -306,12 +362,29 @@ Number of points in spatial dimension.
 
 </div>
 </div><p>
+<a class="anchor" name="1bc8bde2520169d82cf5b7a729e46c6b"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::ready" ref="1bc8bde2520169d82cf5b7a729e46c6b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classParabolic__Eqn__1D__Solver.html#1bc8bde2520169d82cf5b7a729e46c6b">Parabolic_Eqn_1D_Solver::ready</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Flag var, = 1 if the problem is ready to solve, otherwise = 0. 
+<p>
+
+</div>
+</div><p>
 <a class="anchor" name="bab464d3a381d40cbb6309890334f83a"></a><!-- doxytag: member="Parabolic_Eqn_1D_Solver::t_F" ref="bab464d3a381d40cbb6309890334f83a" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double <a class="el" href="classParabolic__Eqn__1D__Solver.html#bab464d3a381d40cbb6309890334f83a">Parabolic_Eqn_1D_Solver::t_F</a><code> [private]</code>          </td>
+          <td class="memname">double <a class="el" href="classParabolic__Eqn__1D__Solver.html#bab464d3a381d40cbb6309890334f83a">Parabolic_Eqn_1D_Solver::t_F</a>          </td>
         </tr>
       </table>
 </div>
@@ -328,7 +401,7 @@ Final time point.
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::MatrixXd <a class="el" href="classParabolic__Eqn__1D__Solver.html#0306c84a031702519a27d4801becaabb">Parabolic_Eqn_1D_Solver::U</a><code> [private]</code>          </td>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classParabolic__Eqn__1D__Solver.html#0306c84a031702519a27d4801becaabb">Parabolic_Eqn_1D_Solver::U</a>          </td>
         </tr>
       </table>
 </div>
@@ -342,7 +415,7 @@ U[m][n] is the value of u on (n+1)-th point at the (m)-th time step (because tim
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="Parabolic__Eqn__1D_8h-source.html">Parabolic_Eqn_1D.h</a><li>src/<a class="el" href="Parabolic__Eqn__1D_8cpp.html">Parabolic_Eqn_1D.cpp</a></ul>
-<hr size="1"><address style="align: right;"><small>Generated on 24 Sep 2014 for A_FDM_Solver_for_1D_Parabolic_Equation by&nbsp;
+<hr size="1"><address style="align: right;"><small>Generated on 29 Sep 2014 for A_FDM_Solver_for_1D_Parabolic_Equation by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
 </body>
